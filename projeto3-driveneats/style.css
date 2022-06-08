@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+body{
+    max-width: 614px;
+    width: 614px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5;
+}
+
+.logo{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-family: 'Righteous', cursive;
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+/*perguntar por que o sticky funcionou*/
+
+.logo div{
+    padding-bottom: 18px;
+    padding-top: 8px;
+    padding-left: 21px;
+}
+
+.logo h1{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    color: white;
+}
+
+.logo p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.main{
+    padding-top: 30px;
+    padding-left: 19px;
+    margin-top: 90px;
+}
+.section-title{
+    color: #333333;
+    font-weight: 400;
+    font-size: 26px;
+    font-family: 'Righteous', cursive;
+}
+
+.section{
+    display: inline-block;
+    max-height: 272px;
+}
+
+.section-scroll{
+    padding-top: 17px;
+    overflow-x: scroll;
+    display: inline-flex;
+}
+
+.section-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.card{
+    width: 172px;
+    height: 216px;
+    box-shadow: 0px 0px 10px -4px #00000040;
+    border-radius: 9px;
+    background-color: white;
+    margin-right: 16px;
+}
+
+/*perguntar quebra de linha display:inline-block*/
+
+.card-content{
+    padding-top: 18px;
+    padding-left: 14px;
+}
+.card img{
+    width: 140px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card h2{
+    padding-top: 9px;
+    font-weight: 700;
+    color: #333333;
+    font-size: 16px;
+}
+
+.card h3{
+    color: #A6A6A6;
+    font-weight: 300;
+    font-size: 15px;
+    padding-top: 4px;
+}
+
+.card p{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    padding-top: 4px;
+}
+
+.bottom-bar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section :last-child{
+    margin-bottom: 39px;
+}
+
+.bottom-bar-button{
+    width: 364px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    color: white;
+}
+
+
