@@ -121,7 +121,7 @@ body{
     margin-bottom: 39px;
 }
 
-#bottom-bar-button{
+.bottom-bar-button{
     width: 364px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -135,7 +135,7 @@ body{
     color: white;
 }
 
-.bottom-bar-button-over{
+.bottomBarButtonOver{
     background-color: #32B72F;
 }
 

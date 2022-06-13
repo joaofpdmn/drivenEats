@@ -1,10 +1,30 @@
-function selectedItem(element){
-    const itemClicado = document.querySelector(".clicked-card");
+
+
+function selectedFood(element){
+    const clickedFood = document.querySelector(".plateScroll .clicked-card");
+    if(clickedFood!==null){
+        clickedFood.classList.remove("clicked-card");
+    }
+    element.classList.add('clicked-card');
+}
+
+function selectedDrink(element){
+    const itemClicado = document.querySelector(".drinkScroll .clicked-card");
     if(itemClicado!==null){
         itemClicado.classList.remove("clicked-card");
     }
-    const clickedCard = element.ClassList.add('clicked-card');
+    element.classList.add('clicked-card');
 }
+
+function selectedDessert(element){
+    const itemClicado = document.querySelector(".dessertScroll .clicked-card");
+    if(itemClicado!==null){
+        itemClicado.classList.remove("clicked-card");
+    }
+    element.classList.add('clicked-card');
+    confirmedButton();
+}
+
 
 function confirmedButton(){
     let buttonConfirmation = document.querySelector('.bottom-bar-button')
@@ -15,8 +35,8 @@ function confirmedButton(){
     
 
     if(foodConfirmation && drinkConfirmation && dessertConfirmation){
-        buttonConfirmation.classList.add('bottom-bar-button-over')
-        buttonText.innerHTML = "Fazer pedido"
+        buttonConfirmation.classList.add('bottomBarButtonOver');
+        buttonText.innerHTML = "Fazer pedido";
     }
 }
 
@@ -38,34 +58,27 @@ function conversaZap(){
         const foodPrice = priceFood.innerText;
         const drinkPrice = priceDrink.innerText;
         const dessertPrice = priceDessert.innerText;
-
         const foodPriceFinal = parseFloat(foodPrice);
         const drinkPriceFinal = parseFloat(drinkPrice);
         const dessertPriceFinal = parseFloat(dessertPrice);
 
-        let total = foodPriceFinal + drinkPriceFinal + dessertPriceFinal;
+        const total = foodPriceFinal + drinkPriceFinal + dessertPriceFinal;
 
         let name = prompt("Digite seu nome: ");
         let address = prompt("Digite seu endereço: ");
 
         let message = `Olá, gostaria de fazer o pedido:
-        - Prato: ${foodName}
-        - Bebida: ${drinkName}
+        - Prato: ${foodName} 
+        - Bebida: ${drinkName} 
         - Sobremesa: ${dessertName}
-        Total: R$ ${total.toFixed(2)}
+        Total: R$ ${total}
         Nome: ${name}
         Endereço: ${address}`
 
         const messageLink = message;
         const link = encodeURIComponent(messageLink, "_blank");
-        const whatsappLink = "https://wa.me/5521972544230?text=" + `${link}`;
+        const whatsappLink = "https://wa.me/5521999774422?text=" + `${link}`;
         window.open(whatsappLink);
     }
 
 }
-
-
-selectedItem();
-confirmedButton();
-conversaZap();
-
